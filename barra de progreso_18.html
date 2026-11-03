@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* Fondo oscuro moderno */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #94a3b8;
+        }
+
+        /* Contenedor de la barra */
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background-color: #1e293b;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* La barra que se llena */
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 5px;
+            /* Aquí controlas cuánto dura la animación (ej. 3 segundos) */
+            animation: cargar 3s ease-in-out forwards;
+        }
+
+        /* Animación de 0% a 100% */
+        @keyframes cargar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cargando sistema...</h2>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="barra"></div>
+        </div>
+    </div>
+
+    <script>
+        // Seleccionamos la barra de progreso
+        const barra = document.getElementById('barra');
+
+        // Escuchamos cuando termina la animación de CSS
+        barra.addEventListener('animationend', () => {
+            // Redirige a tu página de inicio de sesión
+            // Cambia 'login.html' por el nombre real de tu archivo de login
+            window.location.href = 'login_18.html'; 
+        });
+    </script>
+</html> 

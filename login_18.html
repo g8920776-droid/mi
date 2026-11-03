@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* Fondo oscuro */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- ENCABEZADO TIPO BANNER DE LADO A LADO --- */
+        header {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0; /* Elimina espacios fantasma debajo de la imagen */
+        }
+
+        header img {
+            width: 100%;      /* Ocupa todo el ancho de la página */
+            height: 120px;    /* Altura fija para que no esté tan larga */
+            object-fit: cover; /* Ajusta la imagen sin deformarla recortando los sobrantes */
+            display: block;
+        }
+
+        /* --- TARJETA DE LOGIN --- */
+        .login-card {
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin: 20px; /* Margen para pantallas pequeñas */
+        }
+
+        .login-card h2 {
+            margin-bottom: 25px;
+            font-weight: 500;
+            color: #f8fafc;
+            letter-spacing: 0.5px;
+        }
+
+        /* Campos del formulario */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #3b82f6; /* Azul brillante al escribir */
+        }
+
+        /* Botón de envío */
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+
+        /* Mensaje de error */
+        #error-msg {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            display: none;
+        }
+
+        /* Enlaces adicionales opcionales */
+        .extra-links {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .extra-links a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer p {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO CON IMAGEN DE LADO A LADO -->
+    <header>
+        <img src="animacion-1.jpg" alt="Banner superior">
+    </header>
+
+    <!-- TARJETA DE INICIO DE SESIÓN -->
+    <div class="login-card">
+        <h2>🔐 Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">👤 Usuario o Correo</label>
+                <input type="text" id="email" name="email" value="Giovanny" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">🔑 Contraseña</label>
+                <input type="password" id="password" name="password" value="12345678" required>
+            </div>
+
+            <button type="submit" class="btn-submit">🚀 Entrar</button>
+            <p id="error-msg">⚠️ Usuario o contraseña incorrectos</p>
+        </form>
+
+        <div class="extra-links">
+            <p>¿No tienes cuenta? <a href="#">📝 Regístrate</a></p>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA CON DATOS PERSONALES -->
+    <footer>
+        <p>👨‍💻 Desarrollado por <strong>Giovanny Mercado Agustín</strong></p>
+        <p>&copy; 2026 - Todos los derechos reservados</p>
+        <p>📧 Contacto: <a href="mailto:giovanny.mercado@example.com" style="color: #64748b; text-decoration: none;">giovanny.mercado@example.com</a></p>
+        <p>📞 Teléfono: +52 722 123 4567</p>
+        <p>📍 Dirección: Calle Ficticia 123, Estado de México, México</p>
+    </footer>
+
+    <!-- SCRIPT DE VALIDACIÓN Y REDIRECCIÓN -->
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorMsg = document.getElementById('error-msg');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue por defecto
+
+            const usuarioIngresado = document.getElementById('email').value.trim();
+            const passwordIngresado = document.getElementById('password').value;
+
+            // Validación de credenciales
+            if (usuarioIngresado === 'Giovanny' && passwordIngresado === '12345678') {
+                // Redirige al archivo de inicio llamado "Inicio.html"
+                window.location.href = 'Inicio.html';
+            } else {
+                // Si falla, muestra un mensaje de error
+                errorMsg.style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
