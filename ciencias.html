@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ciencias Naturales - Proyecto</title><meta content="Refuerzo académico: Ciencias Naturales" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/><script defer="" src="script.js"></script></head>
+<body data-m="ciencias">
+<!-- Encabezado de la Materia -->
+<header>
+<a class="logo" href="inicio.html">🔬 Ciencias Naturales y Experimentales</a>
+<nav>
+<a class="btn-link" href="inicio.html">← Volver al Inicio</a>
+</nav>
+</header>
+<!-- Banner de la Materia -->
+<section class="banner-container">
+<div class="banner-slide active">
+<video autoplay="" class="banner-video" loop="" muted="" playsinline="" preload="metadata">
+<source src="ciencias.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+            </video>
+<div class="banner-content">
+</div>
+</div>
+</section>
+<main class="main-container">
+<!-- Título de la Materia -->
+<section class="project-title-section">
+<h1 class="main-title">Ciencias Naturales y Experimentales</h1>
+<p>Contenidos, Propósitos y Múltiples Recursos Multimedia Interactivos</p>
+</section>
+<!-- Propósitos Formativos Oficiales -->
+<section class="card">
+<h2>Propósitos Formativos</h2>
+<div class="propositos">
+<div class="proposito">
+<strong>Propósito 1:</strong> Comprende a la Tierra como un sistema, a partir del análisis de los subsistemas que lo conforman y sus interacciones.
+                </div>
+<div class="proposito">
+<strong>Propósito 2:</strong> Aplica el conocimiento sobre los estados de agregación y clasificación de la materia; propiedades de los cuerpos y temperatura para explicar las capas, composición e interacción de la hidrosfera y atmósfera.
+                </div>
+</div>
+</section>
+<!-- Sección Interactiva: Contenidos y Recursos Multimedia -->
+<section class="card">
+<h2>Recursos Multimedia y Actividades Interactivas</h2>
+<p>Despliega cada sección para consultar los temas de ciencias y realizar las actividades didácticas:</p>
+<div class="interactive-list">
+<!-- Acordeón 1: Organizador Gráfico (Subsistemas terrestres) -->
+<details class="accordion-item" open=""><summary class="accordion-header">📊 Recurso 1: Organizador Gráfico - Subsistemas Terrestres</summary><div class="accordion-content">
+<p>Esquema interactivo de las capas e interacciones que conforman el planeta Tierra como un sistema global.</p>
+<div class="tile-grid">
+<div class="tile">
+<h4>💧 Hidrósfera</h4>
+<p>Conjunto de agua en el planeta (océanos, ríos, lagos, vapor y hielo).</p>
+</div>
+<div class="tile">
+<h4>🌬️ Atmósfera</h4>
+<p>Capa gaseosa que envuelve la Tierra, compuesta por nitrógeno, oxígeno y otros gases.</p>
+</div>
+<div class="tile">
+<h4>🌍 Litósfera</h4>
+<p>Capa sólida superficial de la Tierra conformada por rocas y minerales.</p>
+</div>
+</div>
+</div></details>
+<!-- Acordeón 2: Infografía Digital del Ciclo del Agua -->
+<details class="accordion-item"><summary class="accordion-header">📈 Recurso 2: Infografía Digital - Ciclo Biogeoquímico del Agua</summary><div class="accordion-content">
+<p>Fases principales del movimiento del agua a través de los subsistemas:</p>
+<div class="steps">
+<div class="step">
+<strong>1. Evaporación</strong><br/><span>Calor solar</span>
+</div>
+<div class="step">
+<strong>2. Condensación</strong><br/><span>Formación de nubes</span>
+</div>
+<div class="step">
+<strong>3. Precipitación</strong><br/><span>Lluvia o nieve</span>
+</div>
+<div class="step">
+<strong>4. Colección</strong><br/><span>Retorno a océanos</span>
+</div>
+</div>
+</div></details>
+<!-- Acordeón 3: Rompecabezas Interactivo -->
+<details class="accordion-item"><summary class="accordion-header">🧩 Recurso 3: Rompecabezas Interactivo (Subsistemas Terrestres)</summary><div class="accordion-content">
+<p>Haz clic en cada tarjeta para confirmar y ensamblar los componentes del sistema Tierra:</p>
+<div class="puzzle-container">
+<button class="puzzle-card" data-name="Atmósfera" type="button">🌬️ Capa de Gases (Atmósfera)</button>
+<button class="puzzle-card" data-name="Hidrosfera" type="button">🌊 Capa de Agua (Hidrosfera)</button>
+<button class="puzzle-card" data-name="Litosfera" type="button">⛰️ Capa Rocosa (Litosfera)</button>
+</div>
+<p id="puzzle-msg"></p>
+</div></details>
+<!-- Acordeón 4: Archivo Interactivo / Evaluación -->
+<details class="accordion-item"><summary class="accordion-header">💻 Recurso 4: Archivo Interactivo - Evaluación de Ciencias</summary><div class="accordion-content quiz" data-no="Incorrecto. Inténtalo de nuevo." data-none="Selecciona una opción." data-ok="¡Correcto! Es el ciclo hidrológico, o ciclo del agua.">
+<p>¿Qué nombre recibe el ciclo biogeoquímico mediante el cual el agua circula entre la hidrósfera, la atmósfera y la superficie terrestre?</p>
+<div>
+<label><input name="sci-eval" type="radio" value="wrong"/> A) Ciclo del carbono.</label>
+<label><input name="sci-eval" type="radio" value="correct"/> B) Ciclo hidrológico o del agua.</label>
+<label><input name="sci-eval" type="radio" value="wrong"/> C) Ciclo del nitrógeno.</label>
+</div>
+<button class="check" type="button">Comprobar Respuesta</button>
+<p class="quiz-msg" id="sci-eval-msg" role="status"></p>
+</div></details>
+</div>
+</section>
+</main>
+<!-- Pie de página -->
+<footer><div class="foot-grid">
+<div><h4>Construyo, Practico y Aprendo</h4><p>Refuerzo académico para el tercer semestre de la carrera técnica en Programación, CECYTEM Plantel Ixtlahuaca.</p></div>
+<div><h4>Contacto</h4><address><p>📍 La Concepción Enyege, Ixtlahuaca, Estado de México. C.P. 50740</p>
+<p>📞 <a href="tel:+527202402421">+52 7202402421</a></p><p>✉️ <a href="mailto:g8920776@gmail.com">g8920776@gmail.com</a></p>
+<p>Facebook: Giovanny Mercado Agustin</p><p>Instagram: gio_m.a</p></address></div>
+<div><h4>Elaborado por</h4><p>Giovanny Mercado Agustin</p><p>Grupo 304, N.L. 18</p><p>28 de octubre de 2026</p></div></div>
+<p class="copy">© 2026 Construyo, Practico y Aprendo. Todos los derechos reservados.</p></footer>
+<!-- Scripts de Interactividad -->
+
+</body>
+</html>

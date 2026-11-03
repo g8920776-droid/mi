@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construyo, Practico y Aprendo</title>
+    <meta name="description" content="Sitio de refuerzo académico del tercer semestre, CECYTEM Ixtlahuaca">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="inicio.html">Construyo, Practico y Aprendo</a>
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <a href="#materias">Materias</a>
+            <a href="#proyecto">Proyecto</a>
+            <a href="#galeria">Galería</a>
+        </nav>
+    </header>
+
+    <section class="banner-container" aria-label="Presentación">
+        <div class="banner-slide">
+            <video muted loop playsinline preload="metadata">
+                <source src="banner 1.mp4" type="video/mp4">
+            </video>
+            <div class="banner-content">
+            </div>
+        </div>
+        <div class="banner-slide">
+            <video muted loop playsinline preload="metadata">
+                <source src="banner 2.mp4" type="video/mp4">a
+            </video>
+            <div class="banner-content">
+            </div>
+        </div>
+        <div class="banner-slide">
+            <video muted loop playsinline preload="metadata">
+                <source src="banner 3.mp4" type="video/mp4">
+            </video>
+            <div class="banner-content">
+            </div>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <section id="materias">
+            <h2>Materias del semestre</h2>
+            <div class="subjects-grid">
+                <a href="lengua.html" class="subject-card-link" data-m="lengua">
+                    <div class="subject-card">
+                        <span class="ico" aria-hidden="true">📚</span>
+                        <div>
+                            <h3>Lengua y Comunicación</h3>
+                            <p>Géneros literarios: novela, cuento, drama y poesía</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="matematicas.html" class="subject-card-link" data-m="matematicas">
+                    <div class="subject-card">
+                        <span class="ico" aria-hidden="true">📐</span>
+                        <div>
+                            <h3>Pensamiento Matemático</h3>
+                            <p>Sistemas de ecuaciones lineales y métodos de solución</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="filosofia.html" class="subject-card-link" data-m="filosofia">
+                    <div class="subject-card">
+                        <span class="ico" aria-hidden="true">💭</span>
+                        <div>
+                            <h3>Pensamiento Filosófico y Humanidades</h3>
+                            <p>Argumentación, lógica y filosofía política</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ingles.html" class="subject-card-link" data-m="ingles">
+                    <div class="subject-card">
+                        <span class="ico" aria-hidden="true">🌐</span>
+                        <div>
+                            <h3>Inglés III</h3>
+                            <p>Pasado simple: rutinas y experiencias</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ciencias.html" class="subject-card-link" data-m="ciencias">
+                    <div class="subject-card">
+                        <span class="ico" aria-hidden="true">🔬</span>
+                        <div>
+                            <h3>Ciencias Naturales y Experimentales</h3>
+                            <p>La Tierra como sistema y sus subsistemas</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="proyecto">
+            <h2>Sobre el proyecto</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h3>Problemática</h3>
+                    <p>La disminución del aprovechamiento académico, la baja comprensión lectora y la deserción estudiantil son factores que ponen en riesgo el desempeño escolar y profesional del plantel, por ello es pertinente el diseño de un sitio web como herramienta para el refuerzo educativo que coadyuve al mejoramiento de los indicadores académicos.</p>
+                </div>
+                <div class="card">
+                    <h3>Propósito</h3>
+                    <p>Los estudiantes de la carrera técnica en programación codificarán un framework mediante la aplicación de metodologías ágiles que promuevan el fortalecimiento académico de los contenidos abordados en sus asignaturas.</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top:1.5rem">
+                <h3>Descripción</h3>
+                <p>El proyecto se desarrolla durante el semestre 2026-2027 en el Colegio de Estudios Científicos y Tecnológicos del Estado de México (CECYTEM) Plantel Ixtlahuaca ubicado en el municipio de Ixtlahuaca Estado de México en el cual participarán los estudiantes del tercer semestre de la carrera Técnica en Programación, quienes aplicarán metodologías ágiles para codificar un framework que servirá como herramienta didáctica para potenciar el éxito académico y la consolidación de los contenidos de sus asignaturas.</p>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="gallery-slider">
+                <button class="gallery-btn prev" aria-label="Imagen anterior">&#10094;</button>
+                <figure class="gallery-slide active">
+                    <img src="español.jpg" alt="Lengua y Comunicación" loading="lazy">
+                    <figcaption>Lengua y Comunicación</figcaption>
+                </figure>
+                <figure class="gallery-slide">
+                    <img src="matematicas.jpg" alt="Pensamiento Matemático" loading="lazy">
+                    <figcaption>Pensamiento Matemático</figcaption>
+                </figure>
+                <figure class="gallery-slide">
+                    <img src="ciencias.jpg" alt="Ciencias Naturales" loading="lazy">
+                    <figcaption>Ciencias Naturales</figcaption>
+                </figure>
+                <figure class="gallery-slide">
+                    <img src="filosofia.jpg" alt="Pensamiento Filosófico" loading="lazy">
+                    <figcaption>Pensamiento Filosófico</figcaption>
+                </figure>
+                <figure class="gallery-slide">
+                    <img src="ingles.jpg" alt="Inglés III" loading="lazy">
+                    <figcaption>Inglés III</figcaption>
+                </figure>
+                <button class="gallery-btn next" aria-label="Imagen siguiente">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-grid">
+            <div>
+                <h4>Construyo, Practico y Aprendo</h4>
+                <p>Refuerzo académico para el tercer semestre de la carrera técnica en Programación, CECYTEM Plantel Ixtlahuaca.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <address>
+                    <p>📍 La Concepción Enyege, Ixtlahuaca, Estado de México. C.P. 50740</p>
+                    <p>📞 <a href="tel:+527202402421">+52 7202402421</a></p>
+                    <p>✉️ <a href="mailto:g8920776@gmail.com">g8920776@gmail.com</a></p>
+                    <p>Facebook: Giovanny Mercado Agustin</p>
+                    <p>Instagram: gio_m.a</p>
+                </address>
+            </div>
+            <div>
+                <h4>Elaborado por</h4>
+                <p>Giovanny Mercado Agustin</p>
+                <p>Grupo 304, N.L. 18</p>
+                <p>28 de octubre de 2026</p>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Construyo, Practico y Aprendo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
